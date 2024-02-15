@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+.card {
+    width: 16rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+   
+}
+.poster img{
+    width: 15rem;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.App {
+    margin: 1.5rem;
+   
+    
+}
+
+.search-nav {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10rem;
+
+}
+
+.title {
+    padding-right: 3rem;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
