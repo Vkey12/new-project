@@ -7,10 +7,12 @@ function SearchForm(props) {
   };
 
   return (
+    <div className='search'>
     <form onSubmit={handleSubmit}>
       <input name="searchTerm" type="text" placeholder="Search..." />
       <button type="submit">Search...</button>
     </form>
+    </div>
   );
 }
 

@@ -6,12 +6,11 @@ const MovieCard = (props) => {
         <div className="card">
             <div className="poster">
                 <img src={props.Poster} alt="movie" />
-
+                
             </div>
             <div className="info">
                 <p className="title">{props.Title}</p>
                 <p className="year">{props.Year}</p>
-
             </div>
 
             

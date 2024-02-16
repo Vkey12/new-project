@@ -3,12 +3,16 @@ import './App.css';
 import MovieCard from './MovieCard';
 import SearchForm from './SearchForm';
 import Footer from './Footer';
+import Rating from './Rating';
+import Reviews from './REview';
+
 
 function App() {
 
-  const url = "https://movie-kohl-gamma.vercel.app/Search"
-  
+  const url = "https://movie-kohl-gamma.vercel.app/Search"  
   const [Search, setSearch] = useState([])
+  const [ appRating, setAppRating] = useState(0);
+  const [reviews, setReviews] = useState([]);
   
 
   useEffect(() =>{
@@ -24,6 +28,17 @@ function App() {
       .then((res) => res.json())
       .then((data) => setSearch(data.Search));
   };
+
+  const handleRateApp = (rating) => {
+
+    setAppRating(rating);
+  };
+  
+  const handleAddReview = (review) => {
+    setReviews([...reviews, { text: review }]);
+  };
+
+
  
   return (
     <div className="App">
@@ -36,18 +51,26 @@ function App() {
         <SearchForm onSearch={handleSearch} />
         </div>
         <div className='movies'>
-          {Search.map((movie) =>{
+          {Search && Search.map((movie) =>{
             return <MovieCard {...movie}/>
           })}
-
+        
+        </div>
+        <div>
+          <Rating onRate={handleRateApp} />
         </div>
         <div>
           <Footer/>
         </div>
-
+        <div>
+        <Reviews onAddReview={handleAddReview} />
+        </div>
+       
       </div>
     </div>
   );
 }
 
 export default App;
+
+
