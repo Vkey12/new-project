@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 
 
 const MovieCard = (props) => {
@@ -12,7 +13,9 @@ const MovieCard = (props) => {
                 <p className="title">{props.Title}</p>
                 <p className="year">{props.Year}</p>
             </div>
-
+            <div>
+                <Rating onRate={props.onRate}/>
+            </div>
             
 
         </div>

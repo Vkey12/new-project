@@ -3,9 +3,6 @@
     margin: 0;
     font-family: sans-serif;
 }
-.title {
-    color: white;
-}
 
 .card {
     width: 16rem;
@@ -49,25 +46,3 @@
     padding: 0.5rem;
 }
 
-.head-rates{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh
-}
-
-.rates {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    font-size: 24px;
-
-}
-
-.final-rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    font-size: 2em;
-}

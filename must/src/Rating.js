@@ -10,7 +10,7 @@ function Rating({ onRate }) {
 
   return (
     <div className='all-rates'>
-      <h2 className='head-rates'>Rate the App</h2>
+      <h2 className='head-rates'>Rate the Movie</h2>
       <div className='rates'>
         {[1, 2, 3, 4, 5].map((value) => (
           <button key={value} onClick={() => handleRate(value)}>

@@ -52,7 +52,7 @@ function App() {
         </div>
         <div className='movies'>
           {Search && Search.map((movie) =>{
-            return <MovieCard {...movie}/>
+            return <MovieCard {...movie} onRate={handleRateApp}/>
           })}
         
         </div>
